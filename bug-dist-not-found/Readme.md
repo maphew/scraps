@@ -70,6 +70,7 @@ pkg_resources.DistributionNotFound: The 'my-project==0.1.0' distribution was not
 
 * https://github.com/leo-editor/leo-editor/issues/968
 * https://stackoverflow.com/questions/35457144/pkg-resources-distributionnotfound-when-using-a-module-installed-from-a-bdist-rp
+* https://stackoverflow.com/questions/52375693/troubleshooting-pkg-resources-distributionnotfound-error
 
 
 
