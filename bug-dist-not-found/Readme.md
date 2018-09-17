@@ -4,8 +4,10 @@ Why does this simple program result in a `pkg_resources.DistributionNotFound` er
 
 # Build
 
+    pushd D:\code-maphew\scraps\bug-dist-not-found
+    python setup.py install --root=target --prefix=usr
+
 ```python
-$ python setup.py install --root=target --prefix=usr
 running install
 running build
 running build_py
@@ -39,6 +41,10 @@ Installing my_project.exe script to target\usr\Scripts
 ```
 
 # Run
+
+    pushd D:\code-maphew\scraps\bug-dist-not-found
+    .\target\usr\Scripts\my_project.exe
+
 ```python
 Traceback (most recent call last):
   File "D:\code-maphew\scraps\bug-dist-not-found\target\usr\Scripts\my_project-script.py", line 6, in <module>
