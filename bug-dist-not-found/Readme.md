@@ -64,6 +64,19 @@ Traceback (most recent call last):
 pkg_resources.DistributionNotFound: The 'my-project==0.1.0' distribution was not found and is required by the application
 ```
 
+## 2018-09-19
+
+Thanks to [@benoit-pierre](https://github.com/pypa/setuptools/issues/1495#issuecomment-422597138) we learn that defining PYTHONHOME to something, anything, changes the error:
+
+```
+> set pythonhome=X:\anything\at\all
+
+> target\usr\Scripts\my_project.exe
+Fatal Python error: Py_Initialize: unable to load the file system codec
+ModuleNotFoundError: No module named 'encodings'
+
+Current thread 0x00002074 (most recent call first):
+```
 
 
 ### References
@@ -71,6 +84,7 @@ pkg_resources.DistributionNotFound: The 'my-project==0.1.0' distribution was not
 * https://github.com/leo-editor/leo-editor/issues/968
 * https://stackoverflow.com/questions/35457144/pkg-resources-distributionnotfound-when-using-a-module-installed-from-a-bdist-rp
 * https://stackoverflow.com/questions/52375693/troubleshooting-pkg-resources-distributionnotfound-error
+* https://github.com/pypa/setuptools/issues/1495
 
 
 
